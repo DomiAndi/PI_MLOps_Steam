@@ -58,3 +58,27 @@ Para el primer enfoque del modelo, se establece una relación ítem-ítem. En es
 Por otra parte, se considera una segunda propuesta para el sistema de recomendación, basada en el filtro user-item. En esta estrategia, se analiza a un usuario para identificar usuarios con gustos similares y se recomiendan ítems que hayan sido apreciados por estos usuarios afines.
 
 Acá el trabajo realizado: ["Modelo"](Modelo_Recomendacion.ipynb)
+
+## FastAPI
+
+Si desea ejecutar la API desde el localhost debe seguir los siguientes pasos: 
+
+- Clonar el proyecto haciendo git clone **git@github.com:/DomiAndi/PI_MLOps_Steam**
+
+- Preparación del entorno de trabajo en **Visual Studio Code**
+
+* Crear entorno **python -m venv** entorno (o el nombre que usted desee)
+
+* Ingresar al entorno haciendo **entorno\bin\activate**, en el caso si usa Windows entorno\Scripts\activate
+
+- Instalar dependencias con **pip install -r requirements.txt**
+
+- Ejecutar el archivo **main.py** desde consola activando uvicorn. Si usted importa la libreria uvicorn en el archivo **main.py**, desde la consola escribir **python main.py** y correra facilmente. De lo contrario puedes hacer **uvicorn main:app --reload**
+
+- Hacer Ctrl + clic sobre la dirección **http://XXX.X.X.X:XXXX**  (eso se visualizara en su Terminal).
+
+- Una vez en el navegador, **agregar /docs para acceder**.
+
+- En cada una de las funciones hacer clic en **Try it out** y luego introducir el dato que requiera o utilizar los ejemplos por defecto. 
+
+- Finalmente Ejecutar y observar la respuesta.
