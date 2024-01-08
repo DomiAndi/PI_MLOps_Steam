@@ -24,3 +24,37 @@ Este conjunto de datos proporciona una ventana a los propios juegos en Steam. In
 ["ETL Steam_Games"](ETL_steam_games.ipynb)
 ["ETL Users Items"](ETL_user_items.ipynb)
 ["ETL Users Reviews"](ETL_user_reviews.ipynb)
+
+- **Análisis de Sentimiento:** Crear una nueva columna, 'sentiment_analysis', aplicando análisis de sentimiento mediante Procesamiento de Lenguaje Natural (NLP) a las reseñas de usuarios. La escala que se utilizo fue: '0' para comentarios negativos, '1' para neutrales y '2' para positivos.
+
+### Análisis Exploratorio de Datos (EDA)
+
+- **Exploración Manual:** Realizar un EDA manual después del ETL para investigar las relaciones entre variables, identificar valores atípicos y descubrir patrones interesantes dentro del conjunto de datos, para esta tarea se utilizan diferentes librerias para hacer visualizaciones y medidas estadisticas. ["EDA"](EDA.ipynb)
+
+- **Creación de DataFrames Auxiliares:** Antes de desarrollar las funciones de la API, se crearon DataFrames auxiliares para optimizar el espacio y mejorar el rendimiento de las funciones. Estos DataFrames se utilizaron para almacenar datos específicos necesarios para las consultas de la API. ["Dataframes Auxiliares](DataFrames_Auxiliare.ipynb)
+
+### Desarrollo de la API
+
+- **Framework:** Utilizar el framework FastAPI para exponer los datos de la empresa a través de endpoints RESTful.
+- **Endpoints:**
+  - `PlayTimeGenre(genero: str)`: Devuelve el año de lanzamiento con más horas jugadas para el género especificado.
+  - `UserForGenre(genero: str)`: Devuelve el usuario con más horas jugadas para el género dado y una lista de acumulación de horas jugadas por año.
+  - `UsersRecommend(año: int)`: Devuelve el top 3 de juegos más recomendados por usuarios para el año especificado.
+  - `UsersWorstDeveloper(año: int)`: Devuelve el top 3 de desarrolladoras con juegos menos recomendados por usuarios para el año especificado.
+  - `sentiment_analysis(empresa_desarrolladora: str)`: Devuelve un diccionario con el recuento de análisis de sentimiento para reseñas asociadas con el desarrollador de juegos especificado.
+
+  - Dentro de la carpeta Datasets se encuentran los dataframes utilizados para cada funcion y en este archivo se probaron la funciones antes de utilizar FastAPI ["Funciones API"](Funciones_API.ipynb)
+
+### Modelo de Aprendizaje Automático
+
+En esta fase del proyecto, se llevó a cabo el modelado para el desarrollo del Sistema de Recomendación, basado en la similitud del coseno, donde se crearon las siguientes funciones:
+
+Primera Función item-item, introduzco el id del juego y me devuelve juegos recomendados.
+
+Segunda Función de usuario-item, Ingreso el id del usuario y le devuelve juegos recomendados.
+
+Para el primer enfoque del modelo, se establece una relación ítem-ítem. En este escenario, se evalúa un ítem con respecto a su similitud con otros ítems para ofrecer recomendaciones similares. En este caso, el input corresponde a un juego y el output es una lista de juegos recomendados, utilizando el concepto de similitud del coseno.
+
+Por otra parte, se considera una segunda propuesta para el sistema de recomendación, basada en el filtro user-item. En esta estrategia, se analiza a un usuario para identificar usuarios con gustos similares y se recomiendan ítems que hayan sido apreciados por estos usuarios afines.
+
+Acá el trabajo realizado: ["Modelo"](Modelo_Recomendacion.ipynb)
