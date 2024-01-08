@@ -165,3 +165,8 @@ def recomendacion_usuario(user_id: str):
         return juegos_similares  
     else:
         return "El juego con el user_id especificado no existe en la base de datos."
+
+# Ejecutar el servidor
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
