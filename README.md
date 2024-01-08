@@ -21,6 +21,6 @@ Este conjunto de datos proporciona una ventana a los propios juegos en Steam. In
 ### Ingeniería de Datos
 
 - **Limpieza y Transformación de Datos:** Enfoque inicial en leer el conjunto de datos en el formato correcto. Eliminar columnas innecesarias para optimizar el rendimiento de la API y el entrenamiento del modelo. En este proyecto el etl se divide entre los tres conjuntos de datos que fueron proporcionados y ofrecen informacion acerca de las distintas caracteristicas y opiniones de los juegos presentes en la plataforma.
-["ETL Output"](01_ETL_Output.ipynb)
-["ETL Users Items"](01_ETL_user_items.ipynb)
-["ETL Users Reviews"](01_ETL_user_reviews.ipynb)
+["ETL Output"](ETL_steam_games.ipynb)
+["ETL Users Items"](ETL_user_items.ipynb)
+["ETL Users Reviews"](ETL_user_reviews.ipynb)
