@@ -13,7 +13,7 @@ def message():
 
 #Importamos los datos que se encuentran en formato parquet para dataframes
 
-#df_PlayTimeGenre = pd.read_parquet("Datasets/df_PlayTimeGenre_hour_final1.parquet",low_memory=False)
+df_PlayTimeGenre = pd.read_parquet("Datasets\df_PlayTimeGenre_hour_final1.parquet",low_memory=False)
 df_UserForGenre = pd.read_parquet("Datasets\df_UsersForGenre2_final.parquet",low_memory=False)
 df_UsersRecommend = pd.read_parquet("Datasets\df_UsersRecommend2_final.parquet",low_memory=False)
 df_UsersWorstDeveloper = pd.read_parquet("Datasets\df_UserWorstDeveloper_final1.parquet",low_memory=False)
@@ -27,17 +27,17 @@ def PlayTimeGenre(genero:str):
     """
     La funcion devuelve el año con mas horas jugadas para dicho género.
     """
-    #generos = df_PlayTimeGenre[df_PlayTimeGenre["main_genre"]== genero] #Filtramos en el dataframe el genero que fue solicitado
-    #if generos.empty:  #Con esta linea nos aseguramos que si para ese genero no hay resultado se notifique
-    #    return f"No se encontraron datos para el género {genero}"
-    #año_max = generos.loc[generos["playtime_hour"].idxmax()] #Primero identificamos la fila (indice) que tiene la máxima cantidad de horas jugadas para el género dado y posteriormente se selecciona esa fila a partir del indice
-    #result = {
-    #    'Genero': genero,
-    #   'Año con Más Horas Jugadas': int(año_max["release_year"]),
-    #   'Total de Horas Jugadas': año_max["playtime_hour"]
-    #}
+    generos = df_PlayTimeGenre[df_PlayTimeGenre["main_genre"]== genero] #Filtramos en el dataframe el genero que fue solicitado
+    if generos.empty:  #Con esta linea nos aseguramos que si para ese genero no hay resultado se notifique
+        return f"No se encontraron datos para el género {genero}"
+    año_max = generos.loc[generos["playtime_hour"].idxmax()] #Primero identificamos la fila (indice) que tiene la máxima cantidad de horas jugadas para el género dado y posteriormente se selecciona esa fila a partir del indice
+    result = {
+        'Genero': genero,
+      'Año con Más Horas Jugadas': int(año_max["release_year"]),
+       'Total de Horas Jugadas': año_max["playtime_hour"]
+    }
 
-    #return result
+    return result
 
 #Segunda funcion: UserForGenre
 
