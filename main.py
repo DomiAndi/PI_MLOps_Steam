@@ -16,7 +16,7 @@ def message():
 df_PlayTimeGenre = pd.read_parquet("Datasets\df_PlayTimeGenre_hour_final1.parquet")
 df_UserForGenre = pd.read_parquet("Datasets\df_UsersForGenre2_final.parquet")
 df_UsersRecommend = pd.read_parquet("Datasets\df_UsersRecommend2_final.parquet")
-df_UsersWorstDeveloper = pd.read_parquet("Datasets/df_UserWorstDeveloper_final1.parquet")
+df_UsersWorstDeveloper = pd.read_parquet("Datasets\df_UserWorstDeveloper_final1.parquet")
 df_Sentiment_Analysis = pd.read_parquet("Datasets\df_Sentiment_analysis_final.parquet")
 modelo_final= pd.read_csv('Datasets\modelo_reco_final.csv',low_memory=False)
 
