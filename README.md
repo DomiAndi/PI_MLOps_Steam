@@ -2,6 +2,8 @@
 ![Static Badge](https://img.shields.io/badge/Python-gray?style=flat&logo=python)
 ![Static Badge](https://img.shields.io/badge/-Pandas-gray?style=flat&logo=pandas)
 ![Static Badge](https://img.shields.io/badge/Numpy-gray?style=flat&logo=Numpy)
+![Static Badge](https://img.shields.io/badge/FastApi-darkseagreen)
+
 
 ## Introducción
 Bienvenido al proyecto MLOps de Steam! En este proyecto, asumiremos el rol de un Ingeniero MLOps en Steam, una plataforma de juegos multinacional. Nuestra misión es crear un sistema de recomendación de videojuegos utilizando aprendizaje automático. Los datos necesitan ser refinados, y nuestra tarea es transformarlos en un estado utilizable, desarrollar un Producto Mínimo Viable (MVP) y desplegarlo como una API RESTful.
