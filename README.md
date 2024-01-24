@@ -25,15 +25,15 @@ Este conjunto de datos proporciona una ventana a los propios juegos en Steam. In
 ### Ingeniería de Datos
 
 - **Limpieza y Transformación de Datos:** Enfoque inicial en leer el conjunto de datos en el formato correcto. Eliminar columnas innecesarias para optimizar el rendimiento de la API y el entrenamiento del modelo. En este proyecto el etl se divide entre los tres conjuntos de datos que fueron proporcionados y ofrecen informacion acerca de las distintas caracteristicas y opiniones de los juegos presentes en la plataforma.
-["ETL Steam_Games"](./ETL_steam_games.ipynb) 
-["ETL Users Items"](./ETL_user_items.ipynb)
-["ETL Users Reviews"](./ETL_user_reviews.ipynb)
+["ETL Steam_Games"](./Notebooks/ETL_steam_games.ipynb) 
+["ETL Users Items"](./Notebooks/ETL_user_items.ipynb)
+["ETL Users Reviews"](./Notebooks/ETL_user_reviews.ipynb)
 
 - **Análisis de Sentimiento:** Crear una nueva columna, 'sentiment_analysis', aplicando análisis de sentimiento mediante Procesamiento de Lenguaje Natural (NLP) a las reseñas de usuarios. La escala que se utilizo fue: '0' para comentarios negativos, '1' para neutrales y '2' para positivos.
 
 ### Análisis Exploratorio de Datos (EDA)
 
-- **Exploración Manual:** Realizar un EDA manual después del ETL para investigar las relaciones entre variables, identificar valores atípicos y descubrir patrones interesantes dentro del conjunto de datos, para esta tarea se utilizan diferentes librerias para hacer visualizaciones y medidas estadisticas. ["EDA"](EDA.ipynb)
+- **Exploración Manual:** Realizar un EDA manual después del ETL para investigar las relaciones entre variables, identificar valores atípicos y descubrir patrones interesantes dentro del conjunto de datos, para esta tarea se utilizan diferentes librerias para hacer visualizaciones y medidas estadisticas. ["EDA"](./Notebooks/EDA.ipynb)
 
 - **Creación de DataFrames Auxiliares:** Antes de desarrollar las funciones de la API, se crearon DataFrames auxiliares para optimizar el espacio y mejorar el rendimiento de las funciones. Estos DataFrames se utilizaron para almacenar datos específicos necesarios para las consultas de la API. ["Dataframes Auxiliares](./DataFrames_Auxiliare.ipynb)
 
