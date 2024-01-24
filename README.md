@@ -82,3 +82,7 @@ Si desea ejecutar la API desde el localhost debe seguir los siguientes pasos:
 - En cada una de las funciones hacer clic en **Try it out** y luego introducir el dato que requiera o utilizar los ejemplos por defecto. 
 
 - Finalmente Ejecutar y observar la respuesta.
+
+## Conclusión
+
+Este proyecto integral de MLOps tiene como objetivo transformar datos de juegos en bruto en un sistema funcional de recomendación desplegado como una API. La optimización del espacio mediante DataFrames auxiliares es una estrategia clave para mejorar el rendimiento de las funciones al igual que utilizar el muestreo en el modelo de recomendacion. Al abordar la ingeniería de datos, la ingeniería de características, el desarrollo de la API, el EDA y el aprendizaje automático, buscamos proporcionar información valiosa y recomendaciones a los usuarios de Steam acerca de los juegos presentes en la plataforma.
