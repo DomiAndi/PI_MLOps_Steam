@@ -3,7 +3,6 @@
 ![Static Badge](https://img.shields.io/badge/-Pandas-gray?style=flat&logo=pandas)
 ![Static Badge](https://img.shields.io/badge/Numpy-gray?style=flat&logo=Numpy)
 ![Static Badge](https://img.shields.io/badge/FastApi-darkseagreen)
-![Static Badge]("https://img.shields.io/badge/Render-cyan")
 
 ## Introducción
 Bienvenido al proyecto MLOps de Steam! En este proyecto, asumiremos el rol de un Ingeniero MLOps en Steam, una plataforma de juegos multinacional. Nuestra misión es crear un sistema de recomendación de videojuegos utilizando aprendizaje automático. Los datos necesitan ser refinados, y nuestra tarea es transformarlos en un estado utilizable, desarrollar un Producto Mínimo Viable (MVP) y desplegarlo como una API RESTful.
@@ -37,8 +36,6 @@ Este conjunto de datos proporciona una ventana a los propios juegos en Steam. In
 
 - **Exploración Manual:** Realizar un EDA manual después del ETL para investigar las relaciones entre variables, identificar valores atípicos y descubrir patrones interesantes dentro del conjunto de datos, para esta tarea se utilizan diferentes librerias para hacer visualizaciones y medidas estadisticas. ["EDA"](./Notebooks/EDA.ipynb)
 
-- **Creación de DataFrames Auxiliares:** Antes de desarrollar las funciones de la API, se crearon DataFrames auxiliares para optimizar el espacio y mejorar el rendimiento de las funciones. Estos DataFrames se utilizaron para almacenar datos específicos necesarios para las consultas de la API. ["Dataframes Auxiliares](./DataFrames_Auxiliare.ipynb)
-
 ### Desarrollo de la API
 
 - **Framework:** Utilizar el framework FastAPI para exponer los datos de la empresa a través de endpoints RESTful.
@@ -49,7 +46,7 @@ Este conjunto de datos proporciona una ventana a los propios juegos en Steam. In
   - `UsersWorstDeveloper(año: int)`: Devuelve el top 3 de desarrolladoras con juegos menos recomendados por usuarios para el año especificado.
   - `sentiment_analysis(empresa_desarrolladora: str)`: Devuelve un diccionario con el recuento de análisis de sentimiento para reseñas asociadas con el desarrollador de juegos especificado.
 
-  - Dentro de la carpeta Datasets se encuentran los dataframes utilizados para cada funcion y en este archivo se probaron la funciones antes de utilizar FastAPI ["Funciones API"](./Funciones_API.ipynb)
+  - Dentro de la carpeta Datasets se encuentran los dataframes utilizados para cada funcion y en este archivo se probaron la funciones antes de utilizar FastAPI ["Funciones API"](./Notebooks/Funciones_API.ipynb)
 
 ### Modelo de Aprendizaje Automático
 
@@ -63,7 +60,7 @@ Para el primer enfoque del modelo, se establece una relación ítem-ítem. En es
 
 Por otra parte, se considera una segunda propuesta para el sistema de recomendación, basada en el filtro user-item. En esta estrategia, se analiza a un usuario para identificar usuarios con gustos similares y se recomiendan ítems que hayan sido apreciados por estos usuarios afines.
 
-Acá el trabajo realizado: ["Modelo"](./Modelo_Recomendacion.ipynb)
+Acá el trabajo realizado: ["Modelo"](./Notebooks/Modelo_Recomendacion.ipynb)
 
 ## FastAPI
 
