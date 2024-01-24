@@ -25,9 +25,9 @@ Este conjunto de datos proporciona una ventana a los propios juegos en Steam. In
 ### Ingeniería de Datos
 
 - **Limpieza y Transformación de Datos:** Enfoque inicial en leer el conjunto de datos en el formato correcto. Eliminar columnas innecesarias para optimizar el rendimiento de la API y el entrenamiento del modelo. En este proyecto el etl se divide entre los tres conjuntos de datos que fueron proporcionados y ofrecen informacion acerca de las distintas caracteristicas y opiniones de los juegos presentes en la plataforma.
-["ETL Steam_Games"](ETL_steam_games.ipynb)
-["ETL Users Items"](ETL_user_items.ipynb)
-["ETL Users Reviews"](ETL_user_reviews.ipynb)
+["ETL Steam_Games"](./ETL_steam_games.ipynb) 
+["ETL Users Items"](./ETL_user_items.ipynb)
+["ETL Users Reviews"](./ETL_user_reviews.ipynb)
 
 - **Análisis de Sentimiento:** Crear una nueva columna, 'sentiment_analysis', aplicando análisis de sentimiento mediante Procesamiento de Lenguaje Natural (NLP) a las reseñas de usuarios. La escala que se utilizo fue: '0' para comentarios negativos, '1' para neutrales y '2' para positivos.
 
@@ -35,7 +35,7 @@ Este conjunto de datos proporciona una ventana a los propios juegos en Steam. In
 
 - **Exploración Manual:** Realizar un EDA manual después del ETL para investigar las relaciones entre variables, identificar valores atípicos y descubrir patrones interesantes dentro del conjunto de datos, para esta tarea se utilizan diferentes librerias para hacer visualizaciones y medidas estadisticas. ["EDA"](EDA.ipynb)
 
-- **Creación de DataFrames Auxiliares:** Antes de desarrollar las funciones de la API, se crearon DataFrames auxiliares para optimizar el espacio y mejorar el rendimiento de las funciones. Estos DataFrames se utilizaron para almacenar datos específicos necesarios para las consultas de la API. ["Dataframes Auxiliares](DataFrames_Auxiliare.ipynb)
+- **Creación de DataFrames Auxiliares:** Antes de desarrollar las funciones de la API, se crearon DataFrames auxiliares para optimizar el espacio y mejorar el rendimiento de las funciones. Estos DataFrames se utilizaron para almacenar datos específicos necesarios para las consultas de la API. ["Dataframes Auxiliares](./DataFrames_Auxiliare.ipynb)
 
 ### Desarrollo de la API
 
@@ -47,7 +47,7 @@ Este conjunto de datos proporciona una ventana a los propios juegos en Steam. In
   - `UsersWorstDeveloper(año: int)`: Devuelve el top 3 de desarrolladoras con juegos menos recomendados por usuarios para el año especificado.
   - `sentiment_analysis(empresa_desarrolladora: str)`: Devuelve un diccionario con el recuento de análisis de sentimiento para reseñas asociadas con el desarrollador de juegos especificado.
 
-  - Dentro de la carpeta Datasets se encuentran los dataframes utilizados para cada funcion y en este archivo se probaron la funciones antes de utilizar FastAPI ["Funciones API"](Funciones_API.ipynb)
+  - Dentro de la carpeta Datasets se encuentran los dataframes utilizados para cada funcion y en este archivo se probaron la funciones antes de utilizar FastAPI ["Funciones API"](./Funciones_API.ipynb)
 
 ### Modelo de Aprendizaje Automático
 
@@ -61,7 +61,7 @@ Para el primer enfoque del modelo, se establece una relación ítem-ítem. En es
 
 Por otra parte, se considera una segunda propuesta para el sistema de recomendación, basada en el filtro user-item. En esta estrategia, se analiza a un usuario para identificar usuarios con gustos similares y se recomiendan ítems que hayan sido apreciados por estos usuarios afines.
 
-Acá el trabajo realizado: ["Modelo"](Modelo_Recomendacion.ipynb)
+Acá el trabajo realizado: ["Modelo"](./Modelo_Recomendacion.ipynb)
 
 ## FastAPI
 
